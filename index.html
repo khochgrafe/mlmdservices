@@ -74,8 +74,9 @@
 
         <nav class="navbar">
                <div class="logo-box">
-            <img src="images/mlmdlogo.png" alt="MLMD Remote Services Logo" style="height: 60px; width: auto; display: block;">
+            <img src="images/mlmdlogo.png" alt="MLMD Remote Services Logo" style="height: 90px; width: auto; display: block; filter: invert(1) hue-rotate(180deg) brightness(1.2) contrast(1.1); mix-blend-mode: screen;">
         </div>
+
 
         <div class="nav-links">
             <a href="#services">Our Services</a>
@@ -140,7 +141,12 @@
         <h2 class="section-title">Submit an Intake Request</h2>
         
         <div class="form-box">
-            <form action="https://formspree.io" method="POST">
+                       <!-- Form submissions automatically forward directly to your hotmail -->
+            <form action="https://formsubmit.co" method="POST">
+                <!-- Redirects back to your page after they hit submit -->
+                <input type="hidden" name="_next" value="https://github.io">
+                <input type="hidden" name="_subject" value="New MLMD Service Request!">
+
                 <div class="form-group">
                     <label for="name">Your Name / Firm Name</label>
                     <input type="text" id="name" name="name" required placeholder="e.g., John Doe / Smith Law LLP">
@@ -171,10 +177,12 @@
         </div>
     </section>
 
-    <footer>
+        <footer>
+        <p style="margin-bottom: 10px; font-weight: 600; color: #ffffff;">📞 Call / Text: 519-404-3246 &nbsp;|&nbsp; ✉️ k_hochgrafe@hotmail.com</p>
         <p>&copy; 2026 MLMD Remote Services. All Rights Reserved.</p>
-        <p style="font-size: 0.75rem; margin-top: 10px; color: #64748b;">In Loving Memory of Mom &amp; Dad</p>
+        <p style="font-size: 0.75rem; margin-top: 15px; color: #64748b;">In Loving Memory of Mom &amp; Dad</p>
     </footer>
+
 
 </body>
 </html>

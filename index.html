@@ -1,295 +1,735 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MLMD Remote Services | Professional Document Service &amp; Support</title>
-    <meta name="description" content="Specialized Personal Document Service and Process Serving in Listowel and North Perth. Cost-effective, prompt personal service solutions for local clients and GTA law firms.">
-    
-    <!-- Sophisticated, sharp executive font palette distinct from your other site -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Cinzel:wght@500;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { background-color: #090611; font-family: 'Montserrat', sans-serif; color: #f1f5f9; line-height: 1.6; }
+```
+<title>MLMD Remote Services | Professional Document Service &amp; Support</title>
 
-        /* Premium Dark Executive Navbar Header Container */
+<meta name="description" content="Specialized Personal Document Service and Process Serving in Listowel and North Perth. Cost-effective, prompt personal service solutions for local clients and GTA law firms.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: #090611;
+        font-family: 'Montserrat', sans-serif;
+        color: #f1f5f9;
+        line-height: 1.6;
+    }
+
+    /* Navbar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 8%;
+        background: #04020a;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 1px solid #2e1f4d;
+        min-height: 160px;
+    }
+
+    .logo-box {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .hero-logo-img {
+        width: 290px !important;
+        height: auto !important;
+        display: block;
+        filter: invert(1) hue-rotate(250deg) brightness(1.3) contrast(1.15);
+        mix-blend-mode: screen;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .nav-links a {
+        color: #a78bfa;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.05rem;
+        letter-spacing: 0.5px;
+        transition: 0.25s;
+    }
+
+    .nav-links a:hover {
+        color: #d8b4fe;
+    }
+
+    /* Hero */
+    .hero {
+        background-color: #04020a;
+        background-image:
+            radial-gradient(at 0% 0%, rgba(76, 29, 149, 0.4) 0px, transparent 50%),
+            radial-gradient(at 50% 0%, rgba(15, 23, 42, 0.8) 0px, transparent 50%),
+            radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.2) 0px, transparent 50%),
+            linear-gradient(rgba(4, 2, 10, 0.4) 0%, #090611 100%),
+            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%234c1d95' fill-opacity='0.15'%3E%3Cpath d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2v2h-2V0zm0 4h2v2h-2V4zm0 4h2v2h-2V8zm0 12h2v2h-2v-2zm0 12h2v2h-2v-2zm4 4h2v2h-2v-2zm4 0h2v2h-2v-2zm12 0h2v2h-2v-2zm12 0h2v2h-2v-2z'/%3E%3C/g%3E%3C/svg%3E");
+        padding: 130px 8%;
+        border-bottom: 1px solid #2e1f4d;
+    }
+
+    .hero-inner {
+        max-width: 900px;
+    }
+
+    .hero h1 {
+        font-family: 'Cinzel', serif;
+        font-size: clamp(2.4rem, 5vw, 3.8rem);
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 25px;
+        color: #ffffff;
+        text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+        letter-spacing: 1px;
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+        color: #cbd5e1;
+        max-width: 750px;
+        margin-bottom: 45px;
+        font-weight: 400;
+    }
+
+    /* Contact Bar */
+    .contact-bar {
+        background: #120d24;
+        border-bottom: 1px solid #2e1f4d;
+        padding: 22px 8%;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: #cbd5e1;
+    }
+
+    .contact-bar span {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .contact-bar a {
+        color: #c084fc;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    .contact-bar a:hover {
+        text-decoration: underline;
+    }
+
+    /* Sections */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 110px 8%;
+    }
+
+    .section-title {
+        font-family: 'Cinzel', serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+    }
+
+    .section-desc {
+        font-size: 1.2rem;
+        color: #cbd5e1;
+        max-width: 750px;
+        margin-bottom: 60px;
+        font-weight: 400;
+    }
+
+    /* Services */
+    .services-list {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .service-row {
+        background: #130e26;
+        padding: 50px;
+        border-radius: 12px;
+        border: 1px solid #2e1f4d;
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        gap: 40px;
+        transition: 0.3s;
+    }
+
+    .service-row:hover {
+        border-color: #5b21b6;
+        box-shadow: 0 20px 40px -15px rgba(0,0,0,0.6);
+    }
+
+    .service-left h3 {
+        font-family: 'Cinzel', serif;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #ffffff;
+        line-height: 1.3;
+    }
+
+    .service-left .tag {
+        display: inline-block;
+        margin-top: 15px;
+        background: #2e1f4d;
+        color: #d8b4fe;
+        padding: 6px 14px;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: 1px solid rgba(167, 139, 250, 0.2);
+    }
+
+    .service-right p {
+        font-size: 1.15rem;
+        color: #e2e8f0;
+        margin-bottom: 25px;
+    }
+
+    .service-right ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 15px;
+        list-style-type: none;
+    }
+
+    .service-right li {
+        font-size: 1.05rem;
+        color: #cbd5e1;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+    }
+
+    .service-right li::before {
+        content: "▪";
+        color: #a78bfa;
+        font-size: 1.2rem;
+    }
+
+    /* Coverage Panel */
+    .info-panel {
+        background: linear-gradient(135deg, #130e26 0%, #04020a 100%);
+        padding: 55px;
+        border-radius: 16px;
+        border: 1px solid #2e1f4d;
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .panel-column h3 {
+        font-family: 'Cinzel', serif;
+        font-size: 1.5rem;
+        color: #ffffff;
+        margin-bottom: 15px;
+    }
+
+    .panel-column p {
+        font-size: 1.1rem;
+        color: #cbd5e1;
+        line-height: 1.6;
+    }
+
+    .panel-column ul {
+        margin-left: 20px;
+        margin-top: 12px;
+        color: #cbd5e1;
+    }
+
+    .panel-column li {
+        margin-bottom: 8px;
+    }
+
+    /* Form */
+    .form-box {
+        background: #130e26;
+        padding: 55px;
+        border-radius: 12px;
+        border: 1px solid #2e1f4d;
+        max-width: 750px;
+        margin: 0 auto;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .form-group label {
+        font-weight: 700;
+        font-size: 0.9rem;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 14px;
+        border: 1px solid #2e1f4d;
+        border-radius: 6px;
+        font-size: 1rem;
+        width: 100%;
+        transition: 0.2s;
+        color: #ffffff;
+        background: #04020a;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        border-color: #a78bfa;
+        outline: none;
+        background: #090611;
+        box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.2);
+    }
+
+    .form-group textarea {
+        min-height: 150px;
+        resize: vertical;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 16px 36px;
+        background: #8b5cf6;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 700;
+        border-radius: 6px;
+        transition: 0.25s;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+    }
+
+    .btn:hover {
+        background: #7c3aed;
+        transform: translateY(-1px);
+    }
+
+    .form-box .btn {
+        background: #ffffff;
+        color: #04020a;
+    }
+
+    .form-box .btn:hover {
+        background: #e2e8f0;
+    }
+
+    footer {
+        background: #020105;
+        color: #4b5563;
+        text-align: center;
+        padding: 55px 20px;
+        font-size: 0.95rem;
+        border-top: 1px solid #2e1f4d;
+    }
+
+    /* Mobile */
+    @media(max-width: 768px) {
+
         .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 8%;
-            background: #04020a;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #2e1f4d;
-            min-height: 160px;
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+            padding: 25px 20px;
+            min-height: auto;
         }
-        .logo-box { display: flex; align-items: center; height: 100%; }
-        
-        /* Enforces a Massive Visual Presence for your Logo file with explicit color inversion overrides */
-        .hero-logo-img { 
-            width: 290px !important; 
-            height: auto !important; 
-            display: block; 
-            filter: invert(1) hue-rotate(250deg) brightness(1.3) contrast(1.15); 
-            mix-blend-mode: screen;
-        }
-        
-        .nav-links { display: flex; gap: 40px; align-items: center; }
-        .nav-links a { color: #a78bfa; text-decoration: none; font-weight: 600; font-size: 1.05rem; letter-spacing: 0.5px; transition: 0.25s; }
-        .nav-links a:hover { color: #d8b4fe; }
 
-        /* Highly Aesthetic Dark Luxury Purple Gradient Background Layout Header */
-        .hero {
-            background-color: #04020a;
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(76, 29, 149, 0.4) 0px, transparent 50%),
-                radial-gradient(at 50% 0%, rgba(15, 23, 42, 0.8) 0px, transparent 50%),
-                radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.2) 0px, transparent 50%),
-                linear-gradient(rgba(4, 2, 10, 0.4) 0%, #090611 100%),
-                url("data:image/svg+xml,%3Csvg xmlns='http://w3.org' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%234c1d95' fill-opacity='0.15'%3E%3Cpath d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2v2h-2V0zm0 4h2v2h-2V4zm0 4h2v2h-2V8zm0 12h2v2h-2v-2zm0 12h2v2h-2v-2zm4 4h2v2h-2v-2zm4 0h2v2h-2v-2zm12 0h2v2h-2v-2zm12 0h2v2h-2v-2z'/%3E%3C/g%3E%3C/svg%3E");
-            padding: 130px 8%;
-            border-bottom: 1px solid #2e1f4d;
+        .hero-logo-img {
+            width: 240px !important;
         }
-        .hero-inner { max-width: 900px; }
-        .hero h1 { font-family: 'Cinzel', serif; font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 700; line-height: 1.2; margin-bottom: 25px; color: #ffffff; text-shadow: 0 4px 20px rgba(0,0,0,0.6); letter-spacing: 1px; }
-        .hero p { font-size: 1.3rem; color: #cbd5e1; max-width: 750px; margin-bottom: 45px; font-weight: 400; }
-        
-        /* Direct Communication Dashboard Panel */
-        .contact-bar {
-            background: #120d24;
-            border-bottom: 1px solid #2e1f4d;
-            padding: 22px 8%;
-            display: flex;
-            justify-content: space-between;
+
+        .nav-links {
             gap: 20px;
             flex-wrap: wrap;
-            font-weight: 600;
-            font-size: 1.1rem;
-            color: #cbd5e1;
+            justify-content: center;
         }
-        .contact-bar span { display: flex; align-items: center; gap: 8px; }
-        .contact-bar a { color: #c084fc; text-decoration: none; font-weight: 700; }
-        .contact-bar a:hover { text-decoration: underline; }
 
-        /* Component Section Structural Layout Containers */
-        .container { max-width: 1200px; margin: 0 auto; padding: 110px 8%; }
-        .section-title { font-family: 'Cinzel', serif; font-size: 2.5rem; font-weight: 700; color: #ffffff; margin-bottom: 20px; letter-spacing: 1px; }
-        .section-desc { font-size: 1.2rem; color: #cbd5e1; max-width: 750px; margin-bottom: 60px; font-weight: 400; }
-        
-        /* Premium Row Panels Layout */
-        .services-list { display: flex; flex-direction: column; gap: 35px; }
-        .service-row { background: #130e26; padding: 50px; border-radius: 12px; border: 1px solid #2e1f4d; display: grid; grid-template-columns: 320px 1fr; gap: 40px; transition: 0.3s; }
-        .service-row:hover { border-color: #5b21b6; box-shadow: 0 20px 40px -15px rgba(0,0,0,0.6); }
-        .service-left h3 { font-family: 'Cinzel', serif; font-size: 1.6rem; font-weight: 700; color: #ffffff; line-height: 1.3; }
-        .service-left .tag { display: inline-block; margin-top: 15px; background: #2e1f4d; color: #d8b4fe; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(167, 139, 250, 0.2); }
-        .service-right p { font-size: 1.15rem; color: #e2e8f0; margin-bottom: 25px; }
-        .service-right ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px; list-style-type: none; }
-        .service-right li { font-size: 1.05rem; color: #cbd5e1; display: flex; align-items: center; gap: 10px; font-weight: 500; }
-        .service-right li::before { content: "▪"; color: #a78bfa; font-size: 1.2rem; }
-
-        /* Operational Boundaries Layout Panel */
-        .info-panel { background: linear-gradient(135deg, #130e26 0%, #04020a 100%); padding: 55px; border-radius: 16px; border: 1px solid #2e1f4d; margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-        .panel-column h3 { font-family: 'Cinzel', serif; font-size: 1.5rem; color: #ffffff; margin-bottom: 15px; }
-        .panel-column p { font-size: 1.1rem; color: #cbd5e1; line-height: 1.6; }
-        .panel-column ul { margin-left: 20px; margin-top: 12px; color: #cbd5e1; }
-        .panel-column li { margin-bottom: 8px; }
-
-        /* Executive Input Form Panel block */
-        .form-box { background: #130e26; padding: 55px; border-radius: 12px; border: 1px solid #2e1f4d; max-width: 750px; margin: 0 auto; box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
-        .form-group { margin-bottom: 25px; display: flex; flex-direction: column; gap: 8px; }
-        .form-group label { font-weight: 700; font-size: 0.9rem; color: #ffffff; text-transform: uppercase; letter-spacing: 1px; }
-        .form-group input, .form-group select, .form-group textarea { padding: 14px; border: 1px solid #2e1f4d; border-radius: 6px; font-size: 1rem; width: 100%; transition: 0.2s; color: #ffffff; background: #04020a; }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #a78bfa; outline: none; background: #090611; box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.2); }
-        .form-group textarea { min-height: 150px; resize: vertical; }
-        
-        .btn { display: inline-block; padding: 16px 36px; background: #8b5cf6; color: #ffffff; text-decoration: none; font-weight: 700; border-radius: 6px; transition: 0.25s; border: none; cursor: pointer; text-align: center; font-size: 1.1rem; letter-spacing: 0.5px; }
-        .btn:hover { background: #7c3aed; transform: translateY(-1px); }
-        .form-box .btn { background: #ffffff; color: #04020a; }
-        .form-box .btn:hover { background: #e2e8f0; }
-
-        footer { background: #020105; color: #4b5563; text-align: center; padding: 55px 20px; font-size: 0.95rem; border-top: 1px solid #2e1f4d; }
-
-        /* Responsive Breakpoints Framework Safeguard */
-        @media(max-width: 768px) {
-            .navbar { flex-direction: column; gap: 20px; text-align: center; padding: 25px 20px; min-height: auto; }
-            .nav-links { gap: 25px; flex-wrap: wrap; justify-content: center; }
-            .hero { padding: 80px 20px; }
-            .service-row { grid-template-columns: 1fr; gap: 20px; padding: 35px; }
-            .info-panel { grid-template-columns: 1fr; gap: 30px; padding: 35px; }
-            .form-box { padding: 35px 20px; }
+        .hero {
+            padding: 80px 20px;
         }
-    </style>
+
+        .hero h1 {
+            font-size: 2.2rem;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+        }
+
+        .contact-bar {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .service-row {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 35px;
+        }
+
+        .info-panel {
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 35px;
+        }
+
+        .form-box {
+            padding: 35px 20px;
+        }
+
+        .container {
+            padding: 75px 20px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+        }
+    }
+</style>
+```
+
 </head>
+
 <body>
 
-    <!-- Executive Navbar Menu Bar Row -->
-    <nav class="navbar">
-        <div class="logo-box">
-            <img src="images/mlmdlogo.png" alt="MLMD Remote Services Logo" class="hero-logo-img">
-        </div>
-        <div class="nav-links">
-            <a href="#services">Services</a>
-            <a href="#coverage">Coverage Bounds</a>
-            <a href="#intake">Intake Form</a>
-        </div>
-    </nav>
-
-      <!-- Real-Time Communication Hub Dashboard Panels -->
-    <div class="contact-bar">
-        <span>📞 Dispatch Line: <a href="tel:5194043246">519-404-3246</a></span>
-        <span>📍 Location: Listowel, ON</span>
-        <span>✉️ Email Intake: <a href="mailto:k_hochgrafe@hotmail.com">k_hochgrafe@hotmail.com</a></span>
+```
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="logo-box">
+        <img src="images/mlmdlogo.png" alt="MLMD Remote Services Logo" class="hero-logo-img">
     </div>
 
-    <!-- Luxury Dark Abstract Tech Hero Header Row -->
-    <header class="hero">
-        <div class="hero-inner">
-            <h1>Personal Document Service &amp; Corporate Support</h1>
-            <p>Rapid, affordable personal process serving for local professionals and out-of-town law firms. We provide prompt, physical delivery across North Perth.</p>
-            <a href="#intake" class="btn">Submit Assignment for Service</a>
-        </div>
-    </header>
+    <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#coverage">Coverage Bounds</a>
+        <a href="#intake">Intake Form</a>
+    </div>
+</nav>
 
-    <!-- Core Interactive Services Specification Architecture Section -->
-    <section id="services" class="container">
-        <h2 class="section-title">Professional Solutions</h2>
-        <p class="section-desc">While electronic options exist for represented parties, <strong>personal, hand-to-hand delivery remains an essential legal cornerstone</strong>. We provide secure, physical legal verification directly at the ground level for a fraction of the cost.</p>
-        
-        <div class="services-list">
-            <!-- Row Assignment 1: Document Service Protocols -->
-            <div class="service-row">
-                <div class="service-left">
-                    <h3>Personal Document Service</h3>
-                    <span class="tag">Process Serving Priority</span>
-                </div>
-                <div class="service-right">
-                    <p>Fast, legally sound personal document service. We provide a vital boots-on-the-ground presence to serve individuals safely, accurately, and in strict accordance with the Rules of Civil Procedure.</p>
-                    <ul>
-                        <li>All Pleadings, Applications and Motion Materials </li>
-                        <li>Landlord and Tenant Board/Tribunal Notices and Other Demands/Notices</li>
-                        <li>Commissioned Affidavits of Service (AOS) Provided Immediately Upon Completion </li>
-                    </ul>
-                </div>
+<!-- Contact Bar -->
+<div class="contact-bar">
+    <span>📞 Dispatch Line: <a href="tel:5194043246">519-404-3246</a></span>
+    <span>📍 Location: Listowel, ON</span>
+    <span>✉️ Email Intake: <a href="mailto:k_hochgrafe@hotmail.com">k_hochgrafe@hotmail.com</a></span>
+</div>
+
+<!-- Hero -->
+<header class="hero">
+    <div class="hero-inner">
+        <h1>Personal Document Service &amp; Corporate Support</h1>
+
+        <p>
+            Rapid, affordable personal process serving for local professionals and out-of-town law firms.
+            We provide prompt, physical delivery across North Perth.
+        </p>
+
+        <a href="#intake" class="btn">Submit Assignment for Service</a>
+    </div>
+</header>
+
+<!-- Services -->
+<section id="services" class="container">
+
+    <h2 class="section-title">Professional Solutions</h2>
+
+    <p class="section-desc">
+        While electronic options exist for represented parties,
+        <strong>personal, hand-to-hand delivery remains an essential legal cornerstone</strong>.
+        We provide secure, physical legal verification directly at the ground level for a fraction of the cost.
+    </p>
+
+    <div class="services-list">
+
+        <div class="service-row">
+
+            <div class="service-left">
+                <h3>Personal Document Service</h3>
+                <span class="tag">Process Serving Priority</span>
             </div>
 
-            <!-- Row Assignment 2: Cross-Provincial Legal Document Formatting -->
-            <div class="service-row">
-                <div class="service-left">
-                    <h3>Legal Document Formatting</h3>
-                    <span class="tag">Provincial Specialist</span>
-                </div>
-                <div class="service-right">
-                    <p>Expert structural preparation and precise proofing layout alignments tailored to meet the strict jurisdictional requirements of multiple provincial courts.</p>
-                    <ul>
-                        <li>Ontario Rules of Civil Procedure Setup</li>
-                        <li>British Columbia Court Formatting</li>
-                        <li>Alberta Justice Formatting Frameworks</li>
-                        <li>Multi-Jurisdictional Legal Transcripts</li>
-                    </ul>
-                </div>
+            <div class="service-right">
+                <p>
+                    Fast, legally sound personal document service. We provide a vital boots-on-the-ground
+                    presence to serve individuals safely, accurately, and in strict accordance with the
+                    Rules of Civil Procedure.
+                </p>
+
+                <ul>
+                    <li>All Pleadings, Applications and Motion Materials</li>
+                    <li>Landlord and Tenant Board/Tribunal Notices and Other Demands/Notices</li>
+                    <li>Commissioned Affidavits of Service (AOS) Provided Immediately Upon Completion</li>
+                </ul>
             </div>
 
-            <!-- Row Assignment 3: Advanced Business Administration Frameworks -->
-            <div class="service-row">
-                <div class="service-left">
-                    <h3>Administrative &amp; Software Solutions</h3>
-                    <span class="tag">Remote Support</span>
-                </div>
-                <div class="service-right">
-                    <p>Sophisticated operational backup support handling specialized legal applications, billable record tracking layouts, and file coordination assets.</p>
-                    <ul>
-                        <li>Legal Software Programming</li>
-                        <li>Billable Docketing &amp; Invoicing</li>
-                        <li>Digital Ledger Management</li>
-                        <li>General Office Administration Tasks</li>
-                    </ul>
-                </div>
+        </div>
+
+        <div class="service-row">
+
+            <div class="service-left">
+                <h3>Legal Document Formatting</h3>
+                <span class="tag">Provincial Specialist</span>
             </div>
-        </div>
-    </section>
 
-    <!-- Spatial Radius Matrix & Real-Time Operational Window Boundaries Segment -->
-    <section id="coverage" style="background-color: #04020a; border-top: 1px solid #2e1f4d; border-bottom: 1px solid #2e1f4d;">
-        <div class="container">
-            <h2 class="section-title">Coverage &amp; Operational Metrics</h2>
-            <p class="section-desc">Cost-effective regional parameters and clear response tracking windows for incoming corporate legal assignments.</p>
-            
-            <div class="info-panel">
-                <!-- Proximity Metrics Left Side column -->
-                <div class="panel-column">
-                    <h3>📍 Service Area Radius</h3>
-                    <p>We provide document service and courier operations up to a <strong>1.5-hour driving radius</strong> originating directly out of Listowel, Ontario.</p>
-                    <ul>
-                        <li><strong>Included Perimeter:</strong> The first 30 minutes of travel time is automatically built directly into our baseline quotes.</li>
-                        <li><strong>Extended Distance:</strong> Outer locations requiring more than 30 minutes of road travel are estimated reasonably on an individual assignment basis.</li>
-                    </ul>
-                </div>
+            <div class="service-right">
+                <p>
+                    Expert structural preparation and precise proofing layout alignments tailored to meet
+                    the strict jurisdictional requirements of multiple provincial courts.
+                </p>
 
-                <!-- Window Responsiveness Right Side column -->
-                <div class="panel-column">
-                    <h3>⏳ Response Parameters</h3>
-                    <p>Our operational desk monitors text, email, and portal submissions continuously throughout standard commercial hours to process incoming files.</p>
-                    <ul>
-                        <li><strong>Business Hours (9 AM - 5 PM):</strong> Immediate dispatch and confirmation handling patterns.</li>
-                        <li><strong>After-Hours Windows:</strong> All intake inquiries or service requests submitted outside regular business hours are guaranteed a response within a strict <strong>12-hour maximum timeframe</strong>.</li>
-                    </ul>
-                </div>
+                <ul>
+                    <li>Ontario Rules of Civil Procedure Setup</li>
+                    <li>British Columbia Court Formatting</li>
+                    <li>Alberta Justice Formatting Frameworks</li>
+                    <li>Multi-Jurisdictional Legal Transcripts</li>
+                </ul>
             </div>
-        </div>
-    </section>
-
-    <!-- Secure Submission Intake Form UI Section Container Block -->
-    <section id="intake" class="container">
-        <h2 class="section-title" style="text-align: center;">Secure Assignment Intake</h2>
-        <p class="section-desc" style="text-align: center; margin: 0 auto 60px;">Submit your specific project properties below to route files straight to our desk for immediate analysis.</p>
-        
-            <form action="https://formspree.io" method="POST">
-                <input type="hidden" name="_subject" value="New MLMD Service Request!">
-                
-                <div class="form-group">
-                    <label for="name">Your Name / Associated Law Firm Representation</label>
-                    <input type="text" id="name" name="name" required placeholder="e.g., John Smith / Legal Services Group LLP">
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Contact Email Address</label>
-                    <input type="email" id="email" name="email" required placeholder="firm@example.com">
-                </div>
-
-                <div class="form-group">
-                    <label for="service">Required Assignment Protocol</label>
-                    <select id="service" name="service_type" required>
-                        <option value="" disabled selected>Select an option...</option>
-                        <option value="document_service">Document Service (Process Serving)</option>
-                        <option value="formatting">Cross-Provincial Document Formatting</option>
-                        <option value="software_admin">Software Programming &amp; Administration</option>
-                        <option value="commissioning">Signature Commissioning Action</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="details">Detailed Project Parameters &amp; Deadlines</label>
-                    <textarea id="details" name="details" required placeholder="Provide target service coordinates, specific formatting requirements (Ontario/BC/Alberta), docketing instructions, or urgency deadlines..."></textarea>
-                </div>
-
-                <button type="submit" class="btn" style="width: 100%;">Submit Assignment</button>
-            </form>
 
         </div>
-    </section>
 
-    <!-- Professional Corporate Footer Segment -->
-    <footer>
-        <p>&copy; 2026 MLMD Remote Services. All Rights Reserved.</p>
-        <p style="font-size: 0.8rem; margin-top: 15px; color: #3b2861; letter-spacing: 0.5px; font-weight: 500;">Missin' &amp; Lovin' Mom &amp; Dad</p>
-    </footer>
+        <div class="service-row">
+
+            <div class="service-left">
+                <h3>Administrative &amp; Software Solutions</h3>
+                <span class="tag">Remote Support</span>
+            </div>
+
+            <div class="service-right">
+                <p>
+                    Sophisticated operational backup support handling specialized legal applications,
+                    billable record tracking layouts, and file coordination assets.
+                </p>
+
+                <ul>
+                    <li>Legal Software Programming</li>
+                    <li>Billable Docketing &amp; Invoicing</li>
+                    <li>Digital Ledger Management</li>
+                    <li>General Office Administration Tasks</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Coverage -->
+<section id="coverage" style="background-color: #04020a; border-top: 1px solid #2e1f4d; border-bottom: 1px solid #2e1f4d;">
+
+    <div class="container">
+
+        <h2 class="section-title">Coverage &amp; Operational Metrics</h2>
+
+        <p class="section-desc">
+            Cost-effective regional parameters and clear response tracking windows for incoming corporate legal assignments.
+        </p>
+
+        <div class="info-panel">
+
+            <div class="panel-column">
+
+                <h3>📍 Service Area Radius</h3>
+
+                <p>
+                    We provide document service and courier operations up to a
+                    <strong>1.5-hour driving radius</strong> originating directly out of Listowel, Ontario.
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Included Perimeter:</strong>
+                        The first 30 minutes of travel time is automatically built directly into our baseline quotes.
+                    </li>
+
+                    <li>
+                        <strong>Extended Distance:</strong>
+                        Outer locations requiring more than 30 minutes of road travel are estimated reasonably
+                        on an individual assignment basis.
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="panel-column">
+
+                <h3>⏳ Response Parameters</h3>
+
+                <p>
+                    Our operational desk monitors text, email, and portal submissions continuously throughout
+                    standard commercial hours to process incoming files.
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Business Hours (9 AM - 5 PM):</strong>
+                        Immediate dispatch and confirmation handling patterns.
+                    </li>
+
+                    <li>
+                        <strong>After-Hours Windows:</strong>
+                        All intake inquiries or service requests submitted outside regular business hours
+                        are guaranteed a response within a strict <strong>12-hour maximum timeframe</strong>.
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Intake Form -->
+<section id="intake" class="container">
+
+    <h2 class="section-title" style="text-align: center;">
+        Secure Assignment Intake
+    </h2>
+
+    <p class="section-desc" style="text-align: center; margin: 0 auto 60px;">
+        Submit your specific project properties below to route files straight to our desk for immediate analysis.
+    </p>
+
+    <div class="form-box">
+
+        <form action="https://formspree.io/f/xdeneqok" method="POST">
+
+            <input type="hidden" name="_subject" value="New MLMD Service Request!">
+
+            <div class="form-group">
+                <label for="name">Your Name / Associated Law Firm Representation</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="e.g., John Smith / Legal Services Group LLP">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Contact Email Address</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="firm@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="service">Required Assignment Protocol</label>
+
+                <select id="service" name="service_type" required>
+
+                    <option value="" disabled selected>Select an option...</option>
+
+                    <option value="document_service">
+                        Document Service (Process Serving)
+                    </option>
+
+                    <option value="formatting">
+                        Cross-Provincial Document Formatting
+                    </option>
+
+                    <option value="software_admin">
+                        Software Programming &amp; Administration
+                    </option>
+
+                    <option value="commissioning">
+                        Signature Commissioning Action
+                    </option>
+
+                </select>
+            </div>
+
+            <div class="form-group">
+
+                <label for="details">
+                    Detailed Project Parameters &amp; Deadlines
+                </label>
+
+                <textarea
+                    id="details"
+                    name="details"
+                    required
+                    placeholder="Provide target service coordinates, specific formatting requirements (Ontario/BC/Alberta), docketing instructions, or urgency deadlines."></textarea>
+
+            </div>
+
+            <button type="submit" class="btn" style="width: 100%;">
+                Submit Assignment
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+
+    <p>
+        &copy; 2026 MLMD Remote Services. All Rights Reserved.
+    </p>
+
+    <p style="font-size: 0.8rem; margin-top: 15px; color: #3b2861; letter-spacing: 0.5px; font-weight: 500;">
+        Missin' &amp; Lovin' Mom &amp; Dad
+    </p>
+
+</footer>
+```
 
 </body>
 </html>
-  
